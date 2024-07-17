@@ -12,6 +12,7 @@
 		2F175AE22C23442300197D63 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F175AE12C23442300197D63 /* Settings.swift */; };
 		2F175AE62C242BEB00197D63 /* View+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F175AE52C242BEB00197D63 /* View+Extentions.swift */; };
 		2F175AE82C28399700197D63 /* Date+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F175AE72C28399700197D63 /* Date+Extentions.swift */; };
+		2F6F2CB12C2ADA87001E25DA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F2CB02C2ADA87001E25DA /* CardView.swift */; };
 		2FA626FB2C1A489400EA271B /* Expense_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA626FA2C1A489400EA271B /* Expense_TrackerApp.swift */; };
 		2FA626FD2C1A489400EA271B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA626FC2C1A489400EA271B /* ContentView.swift */; };
 		2FA626FF2C1A489500EA271B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA626FE2C1A489500EA271B /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		2F175AE12C23442300197D63 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2F175AE52C242BEB00197D63 /* View+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extentions.swift"; sourceTree = "<group>"; };
 		2F175AE72C28399700197D63 /* Date+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extentions.swift"; sourceTree = "<group>"; };
+		2F6F2CB02C2ADA87001E25DA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2FA626F72C1A489400EA271B /* Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA626FA2C1A489400EA271B /* Expense_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense_TrackerApp.swift; sourceTree = "<group>"; };
 		2FA626FC2C1A489400EA271B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F6F2CAF2C2ADA77001E25DA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F2CB02C2ADA87001E25DA /* CardView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2FA626EE2C1A489400EA271B = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		2FA627082C1A48C300EA271B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2F6F2CAF2C2ADA77001E25DA /* Helpers */,
 				2FC470742C219DB9008C34A9 /* TabViews */,
 				2FA6270A2C1A497300EA271B /* IntroScreen.swift */,
 			);
@@ -209,6 +220,7 @@
 				2FC470762C219DD0008C34A9 /* Recents.swift in Sources */,
 				2FC470712C219A7F008C34A9 /* Transaction.swift in Sources */,
 				2FA626FD2C1A489400EA271B /* ContentView.swift in Sources */,
+				2F6F2CB12C2ADA87001E25DA /* CardView.swift in Sources */,
 				2FA6270B2C1A497300EA271B /* IntroScreen.swift in Sources */,
 				2FA627102C1DADE700EA271B /* Tab.swift in Sources */,
 				2F175AE22C23442300197D63 /* Settings.swift in Sources */,
