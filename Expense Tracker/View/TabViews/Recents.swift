@@ -13,6 +13,10 @@ struct Recents: View {
     // View Properites
     @State private var startDate: Date = .now.startOfMonth
     @State private var endtDate: Date = .now.endOfMonth
+    @State private var selectedCategory: Category = .expense
+    //for animation
+    @Namespace private var animation
+    
     var body: some View {
         GeometryReader {
             //for animations
@@ -33,12 +37,21 @@ struct Recents: View {
                             .hSpacing(.leading)
                             
                             //CardView
+                            CardView(income: 2039, expense: 4098)
+                            
+                            //Custom segmented control
+                            customSegmentedControl()
+                            
+                            ForEach(sampleTransactions) { transaction in
+                                
+                            }
                         } header: {
                             HeaderView(size)
                         }
                     }
                     .padding(15)
                 }
+                .background(.gray.opacity(0.15))
             }
         }
     }
@@ -91,6 +104,33 @@ struct Recents: View {
             .padding(.horizontal, -15)
             .padding(.top, -(safeArea.top + 15))
         }
+    }
+    
+    //Segmented control
+    @ViewBuilder
+    func customSegmentedControl() -> some View {
+        HStack(spacing: 0) {
+            ForEach(Category.allCases, id: \.rawValue) { category in
+                Text(category.rawValue)
+                    .hSpacing()
+                    .padding(.vertical, 10)
+                    .background {
+                        if category == selectedCategory {
+                            Capsule()
+                                .fill(.background)
+                                .matchedGeometryEffect(id: "ACTIVETAB", in: animation)
+                        }
+                    }
+                    .contentShape(.capsule)
+                    .onTapGesture {
+                        withAnimation(.snappy) {
+                            selectedCategory = category
+                        }
+                    }
+            }
+        }
+        .background(.gray.opacity(0.15), in: .capsule)
+        .padding(.top, 5)
     }
     
     func headerBGOpacity(_ proxy: GeometryProxy) -> CGFloat {
