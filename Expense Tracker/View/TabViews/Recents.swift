@@ -41,9 +41,10 @@ struct Recents: View {
                             
                             //Custom segmented control
                             customSegmentedControl()
+                                .padding(.bottom, 10)
                             
                             ForEach(sampleTransactions) { transaction in
-                                
+                                TransactionCardView(transaction: transaction)
                             }
                         } header: {
                             HeaderView(size)
